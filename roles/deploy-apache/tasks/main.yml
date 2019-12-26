@@ -1,0 +1,14 @@
+---
+# tasks file for deploy-apache
+- name: install apache
+  yum:
+    name: httpd
+    state: latest
+  notify: 
+   - start apache
+
+- name: enable apache at boot
+  service:
+    name: httpd
+    enabled: yes
+

@@ -1,0 +1,7 @@
+---
+# handlers file for deploy-apache
+- name: start apache
+  service:
+    name: httpd
+    state: restarted
+
